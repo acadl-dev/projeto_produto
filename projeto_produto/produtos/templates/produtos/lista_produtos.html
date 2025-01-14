@@ -1,0 +1,47 @@
+{% extends 'produtos/base.html' %}
+
+{% block title %}Lista de Produtos{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Lista de Produtos</h1>
+
+<a href="{% url 'produto_criar' %}" class="btn btn-primary mb-3">Adicionar Produto ➕</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                <a href="?ordenacao={{ ordenacao_nome }}">
+                    Nome {% if ordenacao == 'nome' %}⬆️{% elif ordenacao == '-nome' %}⬇️{% endif %}
+                </a>
+            </th>
+            <th>
+                <a href="?ordenacao={{ ordenacao_preco }}">
+                    Preço {% if ordenacao == 'preco' %}⬆️{% elif ordenacao == '-preco' %}⬇️{% endif %}
+                </a>
+            </th>
+            <th>Quantidade</th>
+            <th>Data de Criação</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for produto in produtos %}
+        <tr>
+            <td>{{ produto.nome }}</td>
+            <td>R$ {{ produto.preco }}</td>
+            <td>{{ produto.quantidade_estoque }}</td>
+            <td>{{ produto.data_criacao|date:"d/m/Y H:i" }}</td>
+            <td>
+                <a href="{% url 'produto_editar' produto.id %}" class="btn btn-warning btn-sm">Editar</a>
+                <a href="{% url 'produto_deletar' produto.id %}" class="btn btn-danger btn-sm">Excluir</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5" class="text-center">Nenhum produto cadastrado.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
