@@ -57,7 +57,7 @@ Este é um projeto simples de CRUD (Create, Read, Update, Delete) desenvolvido c
    ```bash
     http://127.0.0.1:8000/produtos/
 
-### Estrutura do Projeto
+## Estrutura do Projeto
             projeto/
             ├── env/                     # Ambiente virtual (não incluir no controle de versão)
             ├── projeto_produto/         # Pasta principal do projeto Django
@@ -159,27 +159,27 @@ O projeto inclui testes unitários para garantir que as validações e comportam
     ```bash
     python manage.py test
 
-## Cobertura dos Testes
+### Cobertura dos Testes
 
 Os testes foram implementados no arquivo tests.py e cobrem os seguintes cenários:
 
-### Modelo Produto
+#### Modelo Produto
 
-#### test_criar_produto_valido:
+##### test_criar_produto_valido:
     Verifica se um produto com valores válidos é criado corretamente.
 
-#### test_preco_negativo:
+##### test_preco_negativo:
     Testa se o modelo rejeita preços negativos.
 
-#### test_quantidade_negativa:
+##### test_quantidade_negativa:
     Testa se o modelo rejeita quantidades negativas.
 
 ### Views de Produto
 
-#### test_criar_produto_via_view:
+##### test_criar_produto_via_view:
     Testa a criação de um produto por meio da view e garante que o redirecionamento ocorre após a criação.
 
-#### test_criar_produto_invalido_via_view:
+##### test_criar_produto_invalido_via_view:
     Verifica se a view rejeita produtos com dados inválidos (nome vazio, preço negativo, quantidade negativa) e exibe mensagens de erro apropriadas.
 
 ### Exemplo de Saída Esperada
