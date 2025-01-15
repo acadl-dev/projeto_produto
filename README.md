@@ -3,10 +3,9 @@
 Este é um projeto simples de CRUD (Create, Read, Update, Delete) desenvolvido com Django, onde é possível gerenciar produtos com campos como nome, preço e quantidade em estoque. O projeto utiliza validações no modelo e feedback para melhorar a experiência do usuário.
 
 ![alt text](image.png)
-<img src="image-1.png" alt="Alt text" width="410" height="250">
-<img src="image-2.png" alt="Alt text" width="410" height="250">
-
-
+![alt text](image1.png)
+![alt text](image2.png)
+![alt text](image3.png)
 
 
 ## Funcionalidades
