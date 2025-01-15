@@ -2,6 +2,10 @@
 
 Este é um projeto simples de CRUD (Create, Read, Update, Delete) desenvolvido com Django, onde é possível gerenciar produtos com campos como nome, preço e quantidade em estoque. O projeto utiliza validações no modelo e feedback para melhorar a experiência do usuário.
 
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+
 ## Funcionalidades
 
 - Listar produtos cadastrados.
@@ -20,8 +24,6 @@ Este é um projeto simples de CRUD (Create, Read, Update, Delete) desenvolvido c
 
 ## Configuração do Projeto
 
-### Backend
-
 1. Clone o repositório:
    ```bash
    git clone https://github.com/acadl-dev/projeto_produto.git  
@@ -31,24 +33,24 @@ Este é um projeto simples de CRUD (Create, Read, Update, Delete) desenvolvido c
    python3 -m venv venv
    source venv/bin/activate  # No Windows, use: venv\Scripts\activate
 
-4. Instale as dependências:
+3. Instale as dependências:
    ```bash
    pip install -r requirements.txt
 
-5.  Aplicar as Migrações
+4.  Aplicar as Migrações
     Configure o banco de dados SQLite e aplique as migrações:
     ```bash
     python manage.py migrate
 
 
-6. Executar o Servidor
+5. Executar o Servidor
     Inicie o servidor de desenvolvimento:
    ```bash
    python manage.py runserver
 
-   Acesse o projeto no navegador pelo endereço:
+6. Acesse o projeto no navegador pelo endereço:
    ```bash
-   http://127.0.0.1:8000/produtos/
+    http://127.0.0.1:8000/produtos/
 
 ### Estrutura do Projeto
             projeto/
