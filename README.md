@@ -84,9 +84,68 @@ Este é um projeto simples de CRUD (Create, Read, Update, Delete) desenvolvido c
             └── .gitignore               # Arquivo para ignorar arquivos/pastas no controle de versão
 
 
-        
+## Documentação das Rotas
+### Rotas no App produto
+As rotas abaixo estão definidas no arquivo produto/urls.py. Elas lidam com as operações de CRUD para o gerenciamento de produtos.
 
+<table border="1" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+            <th>Rota</th>
+            <th>View</th>
+            <th>Descrição</th>
+            <th>Método HTTP</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>/</td>
+            <td>lista_produtos</td>
+            <td>Exibe uma lista de produtos cadastrados.</td>
+            <td>GET</td>
+        </tr>
+        <tr>
+            <td>/novo/</td>
+            <td>produto_criar</td>
+            <td>Exibe um formulário para criar um novo produto e salva os dados enviados.</td>
+            <td>GET, POST</td>
+        </tr>
+        <tr>
+            <td>&lt;int:id&gt;/editar/</td>
+            <td>produto_editar</td>
+            <td>Exibe um formulário para editar um produto existente identificado pelo ID.</td>
+            <td>GET, POST</td>
+        </tr>
+        <tr>
+            <td>&lt;int:id&gt;/deletar/</td>
+            <td>produto_deletar</td>
+            <td>Exibe uma página de confirmação e deleta o produto identificado pelo ID.</td>
+            <td>GET, POST</td>
+        </tr>
+    </tbody>
+</table>
 
+### Rotas no Arquivo Principal
+As rotas principais estão definidas em urls.py no diretório do projeto. Elas incluem as rotas de administração(não utilizadas) e integram as rotas do app produto.
+
+<table border="1" style="border-collapse: collapse; width: 100%;">
+    <thead>
+        <tr>
+            <th>Rota Base</th>
+            <th>Descrição</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>/admin/</td>
+            <td>Acesso ao painel administrativo do Django.</td>
+        </tr>
+        <tr>
+            <td>/produto/</td>
+            <td>Inclui todas as rotas definidas em <code>produto/urls.py</code>.</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Testes
 

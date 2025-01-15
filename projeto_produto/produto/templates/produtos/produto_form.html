@@ -3,13 +3,23 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-<h1>{{ title }}</h1>
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">{{ title }}</h1>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
+    <div class="d-flex justify-content-center">
+        <form method="post" class="w-40"> <!-- Define largura e centraliza o formulário -->
+            {% csrf_token %}
+            {{ form.as_p }}
 
-    <button type="submit" class="btn btn-success">Salvar</button>
-    <a href="{% url 'lista_produtos' %}" class="btn btn-secondary">Cancelar</a>
-</form>
+            <div class="d-flex justify-content-between mt-3">
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-save"></i> Salvar
+                </button>
+                <a href="{% url 'lista_produtos' %}" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Cancelar
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
 {% endblock %}
