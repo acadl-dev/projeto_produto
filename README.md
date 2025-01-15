@@ -55,7 +55,7 @@ Este é um projeto simples de CRUD (Create, Read, Update, Delete) desenvolvido c
 
 6. Acesse o projeto no navegador pelo endereço:
    ```bash
-    http://127.0.0.1:8000/produtos/
+    http://127.0.0.1:8000/produto/
 
 ## Estrutura do Projeto
             projeto/
