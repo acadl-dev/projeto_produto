@@ -4,8 +4,11 @@ Este é um projeto simples de CRUD (Create, Read, Update, Delete) desenvolvido c
 
 ![alt text](image.png)
 ![alt text](image1.png)
-![alt text](image2.png)
-![alt text](image3.png)
+
+<img src="image-2.png" alt="Alt text" width="410" height="250">
+<img src="image-3.png" alt="Alt text" width="410" height="250">
+
+
 
 
 ## Funcionalidades
